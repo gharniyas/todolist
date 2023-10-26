@@ -86,13 +86,14 @@ function App() {
   return (
     <div>
       <Header />
+      <main>
       <Additem
         newItem={newItem}
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
       <Search search={search} setSearch={setSearch} />
-      <main>
+      
         {isLoading && <p>Loadingitems....</p>}
         {fetchError && <p>{`Error:${fetchError}`}</p>}
         {!isLoading && !fetchError && (

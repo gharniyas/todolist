@@ -9,12 +9,15 @@ html {
 }
 
 body {
-  min-height: 180vh;
+  min-height: 200px;
   font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding:30px;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 .App {
@@ -41,6 +44,9 @@ header {
 
 main {
   width: 100%;
+  padding: 100px;
+  padding-bottom: 300px;
+ padding-right: 100px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -141,25 +147,48 @@ ul li::before {
   margin-right: 0.25rem;
   outline: none;
 }
+#addItem{
+  height: 40px;
+  width: 210px;
+  padding-left: 10px;
+  padding-top:5px;
+  padding-bottom: 10px;
+
+}
+
+input{
+margin-left: 20px;
+margin-top: 40px;
+}
 
 button {
-  height: 48px;
-  min-width: 48px;
+  height: 40px;
+  width: 41px;
   border-radius: 0.25rem;
   padding: 0.5rem;
+  margin-left: 20px;
   font-size: 1rem;
   background-color: aliceblue;
   color: mediumblue;
   cursor: pointer;
+  position: relative;
+  top:0px;
+  left:10px;
 }
+
 
 button:focus, 
 button:hover {
   color: white;
   background-color: limegreen;
   outline: none;
+  
 }
-
+svg{
+  position: absolute;
+  top: 5px;
+  left:8px
+}
 .searchForm {
   width: 100%;
   display: flex;
@@ -176,10 +205,12 @@ button:hover {
 
 .searchForm input[type='text'] {
   flex-grow: 1;
-  max-width: 100%;
+  max-width: 500px;
   min-height: 48px;
   font-size: 1rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
   outline: none;
+  padding-left: 170px;
+  margin-left: 450px;
 }
