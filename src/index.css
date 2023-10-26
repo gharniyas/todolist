@@ -1,37 +1,40 @@
+/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Define base font size for the HTML element */
 html {
   font-size: 22px;
 }
 
+/* Styles for the body element */
 body {
   min-height: 200px;
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding:30px;
-  padding-bottom: 50px;
-  overflow: hidden;
+  padding: 10px;
+  padding-bottom: 30px;
+  overflow:visible;
 }
 
+/* Styles for the main container element */
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
-  width: 100%; 
+  height: 100vh;
+  width: 100%;
   max-width: 500px;
   border: 1px solid mediumblue;
   margin: auto;
 }
 
+/* Styles for the header */
 header {
   width: 100%;
   padding: 0 0.25em;
@@ -42,11 +45,10 @@ header {
   align-items: center;
 }
 
+/* Styles for the main content */
 main {
   width: 100%;
-  padding: 100px;
-  padding-bottom: 300px;
- padding-right: 100px;
+  padding: 100px 100px 300px 100px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -55,6 +57,7 @@ main {
   overflow-y: auto;
 }
 
+/* Styles for the footer */
 footer {
   width: 100%;
   padding: 0.55em;
@@ -64,12 +67,14 @@ footer {
   place-content: center;
 }
 
+/* Styles for the unordered list */
 ul {
   width: 100%;
   list-style: none;
   padding: 0 0.25rem 0.25rem;
 }
 
+/* Styles for list items */
 ul li::before {
   content: "\200B";
 }
@@ -87,27 +92,31 @@ ul li::before {
   margin: 0;
 }
 
+/* Styles for checkboxes within items */
 .item input[type="checkbox"] {
   text-align: center;
-  width: 2.5rem;
   width: 48px;
   min-width: 48px;
-  height: 2.5rem;
   height: 48px;
   min-height: 48px;
   cursor: pointer;
   margin-right: 0.5rem;
+  margin-bottom: 40px;
 }
 
+
+/* Styles for checkbox labels when focused */
 .item input[type="checkbox"]:focus + label {
   text-decoration: underline;
 }
 
+/* Styles for labels within items */
 .item > label {
   font-size: 0.75rem;
-  flex-grow: 1;
+  flex-grow: 0.02;
 }
 
+/* Styles for SVG icons within items */
 .item svg {
   width: 48px;
   min-width: 48px;
@@ -115,6 +124,8 @@ ul li::before {
   font-size: 1rem;
   color: steelblue;
   cursor: pointer;
+  position: relative;
+
 }
 
 .item svg:focus, 
@@ -123,44 +134,53 @@ ul li::before {
   outline: none;
 }
 
+/* Styles for the addForm container */
 .addForm {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   margin: 0.5rem 0 0;
-  padding: 0 0.5rem 0.25rem;
+  padding: 0 0.5rem 0.25rem ;
   border-bottom: 1px solid #eee;
+ 
+ 
 }
 
+/* Styles for the addForm label */
 .addForm label {
   position: absolute;
   left: -99999px;
 }
 
+/* Styles for input fields within addForm */
 .addForm input[type='text'] {
   flex-grow: 1;
-  max-width: calc(100% - 50px);
+  max-width: calc(100% - 500px);
   min-height: 48px;
   font-size: 1rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
   margin-right: 0.25rem;
   outline: none;
+  
 }
-#addItem{
+
+/* Styles for the 'addItem' button */
+#addItem {
   height: 40px;
-  width: 210px;
+  width: 300px;
   padding-left: 10px;
-  padding-top:5px;
+  padding-top: 5px;
   padding-bottom: 10px;
-
 }
 
-input{
-margin-left: 20px;
-margin-top: 40px;
+/* Additional styles for input elements */
+input {
+  margin-left: 20px;
+  margin-top: 40px;
 }
 
+/* Styles for buttons */
 button {
   height: 40px;
   width: 41px;
@@ -172,23 +192,26 @@ button {
   color: mediumblue;
   cursor: pointer;
   position: relative;
-  top:0px;
-  left:10px;
+  top: 0px;
+  left: 10px;
 }
 
-
+/* Styles for button hover and focus states */
 button:focus, 
 button:hover {
   color: white;
   background-color: limegreen;
   outline: none;
-  
 }
-svg{
+
+/* Styles for SVG icons */
+svg {
   position: absolute;
   top: 5px;
-  left:8px
+  left: 8px;
 }
+
+/* Styles for the searchForm container */
 .searchForm {
   width: 100%;
   display: flex;
@@ -198,11 +221,13 @@ svg{
   border-bottom: 1px solid #eee;
 }
 
+/* Styles for the searchForm label */
 .searchForm label {
   position: absolute;
   left: -99999px;
 }
 
+/* Styles for input fields within searchForm */
 .searchForm input[type='text'] {
   flex-grow: 1;
   max-width: 500px;
@@ -212,5 +237,6 @@ svg{
   border-radius: 0.25rem;
   outline: none;
   padding-left: 170px;
-  margin-left: 450px;
+  margin-left: 20px;
+ margin-top: 50px;
 }
